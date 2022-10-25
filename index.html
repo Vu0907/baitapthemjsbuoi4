@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      a {
+        color: #495057 !important;
+      }
+
+      p {
+        margin-bottom: 0 !important;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link {
+        color: #fff !important;
+        background-color: #28a745 !important;
+      }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="row pt-4">
+      <div class="col-1 px-4">
+        <ul class="nav nav-pills text-center flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="pill" href="#case1"
+              >Bài 1</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#case2">Bài 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#case3">Bài 3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" href="#case4">Bài 4</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content col-11">
+        <div class="tab-pane container active" id="case1">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div
+                  class="card-header text-uppercase text-center bg-success text-white"
+                >
+                  <i class="fa-solid fa-calculator"></i>
+                  Tính ngày tháng năm
+                </div>
+                <div class="card-body py-4 alert-success">
+                  <div class="row px-4">
+                    <div class="form-group col-md-4">
+                      <input
+                        id="day"
+                        type="number"
+                        class="form-control"
+                        placeholder="Nhập Ngày"
+                      />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <input
+                        id="month"
+                        type="number"
+                        class="form-control"
+                        placeholder="Nhập Tháng"
+                      />
+                    </div>
+                    <div class="form-group col-md-4">
+                      <input
+                        id="year"
+                        type="number"
+                        class="form-control"
+                        placeholder="Nhập Năm"
+                      />
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <button id="btnYesterday" class="btn btn-success mr-5 ml-4">
+                      Ngày hôm qua
+                    </button>
+                    <button id="btnTomorrow" class="btn btn-success ml-5">
+                      Ngày mai
+                    </button>
+                  </div>
+                </div>
+                <div
+                  id="infoDate"
+                  class="card-footer bg-success text-white"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="case2">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div
+                  class="card-header text-center bg-success text-uppercase text-white"
+                >
+                  <i class="fa-solid fa-calculator"></i>
+                  Tính ngày
+                </div>
+                <div class="card-body py-4 alert-success d-flex">
+                  <div class="form-group pr-3">
+                    <input
+                      id="month2"
+                      type="number"
+                      class="form-control"
+                      placeholder="Nhập Tháng"
+                    />
+                  </div>
+                  <div class="form-group pr-5">
+                    <input
+                      id="year2"
+                      type="number"
+                      class="form-control"
+                      placeholder="Nhập Năm"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <button id="btnTinhngay" class="btn btn-success">
+                      Tính Ngày
+                    </button>
+                  </div>
+                </div>
+                <div
+                  id="infoTinhngay"
+                  class="card-footer bg-success text-white"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="case3">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div
+                  class="card-header text-center bg-success text-uppercase text-white"
+                >
+                  <i class="fa-solid fa-calculator"></i>
+                  Đọc số
+                </div>
+                <div class="card-body py-4 alert-success d-flex">
+                  <div class="form-group mr-5">
+                    <input
+                      id="number3digit"
+                      type="number"
+                      class="form-control"
+                      placeholder="Nhập số 3 chữ số"
+                    />
+                  </div>
+                  <div class="text-center">
+                    <button id="btnDocso" class="btn btn-success">
+                      Đọc số
+                    </button>
+                  </div>
+                </div>
+                <div
+                  id="infoDocso"
+                  class="card-footer bg-success text-white"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="case4">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div
+                  class="card-header text-uppercase text-center bg-success text-white"
+                >
+                  <i class="fa-solid fa-shapes"></i>
+                  Tìm sinh viên xa trường nhất
+                </div>
+                <div class="card-body py-4 alert-success">
+                  <div class="px-4">
+                    <div>
+                      <h5 class="text-success">Sinh Viên 1</h5>
+                      <div class="form-group d-flex">
+                        <input
+                          id="ten1"
+                          type="text"
+                          class="form-control mr-3"
+                          placeholder="Nhập tên"
+                        />
+                        <input
+                          id="x1"
+                          type="number"
+                          class="form-control mr-3"
+                          placeholder="Nhập tọa độ x"
+                        />
+                        <input
+                          id="y1"
+                          type="number"
+                          class="form-control"
+                          placeholder="Nhập tọa độ y"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="text-success">Sinh Viên 2</h5>
+                      <div class="form-group d-flex">
+                        <input
+                          id="ten2"
+                          type="text"
+                          class="form-control mr-3"
+                          placeholder="Nhập tên"
+                        />
+                        <input
+                          id="x2"
+                          type="number"
+                          class="form-control mr-3"
+                          placeholder="Nhập tọa độ x"
+                        />
+                        <input
+                          id="y2"
+                          type="number"
+                          class="form-control"
+                          placeholder="Nhập tọa độ y"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="text-success">Sinh Viên 3</h5>
+                      <div class="form-group d-flex">
+                        <input
+                          id="ten3"
+                          type="text"
+                          class="form-control mr-3"
+                          placeholder="Nhập tên"
+                        />
+                        <input
+                          id="x3"
+                          type="number"
+                          class="form-control mr-3"
+                          placeholder="Nhập tọa độ x"
+                        />
+                        <input
+                          id="y3"
+                          type="number"
+                          class="form-control"
+                          placeholder="Nhập tọa độ y"
+                        />
+                      </div>
+                    </div>
+                    <div class="mr-5">
+                      <h5 class="text-success">Trường học</h5>
+                      <div class="form-group d-flex mr-5">
+                        <input
+                          id="x4"
+                          type="number"
+                          class="form-control mr-5"
+                          placeholder="Nhập tọa độ x "
+                        />
+                        <input
+                          id="y4"
+                          type="number"
+                          class="form-control mr-5"
+                          placeholder="Nhập tọa độ y"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button id="btnToado" class="btn btn-success">Tìm</button>
+                  </div>
+                </div>
+                <div
+                  id="infoToado"
+                  class="card-footer bg-success text-white"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
